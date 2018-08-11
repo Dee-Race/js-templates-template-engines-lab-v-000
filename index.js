@@ -8,7 +8,7 @@ function createPost(){
   let title = document.getElementById("title").value;
   let author = document.getElementById("author").value;
   let body = document.getElementById("body").value;
-  
+
   document.getElementsByTagName("main")[0].innerHTML += pageTemplate();
 
   let postSection = postTemplate({"title": title, "body": body, "author": author});
@@ -21,8 +21,10 @@ function createPost(){
 
 function postComment() {
   let commentTemplate = _.template(document.getElementById("comment-template").innerHTML);
+
   let commenterName = document.getElementById("commenterName").value;
   let commentText = document.getElementById("commentText").value:
+
   let comments = document.getElementById("comments");
   comments.innerHTML += commentTemplate({'comment': commentText, 'commenter': commenterName});
 }
